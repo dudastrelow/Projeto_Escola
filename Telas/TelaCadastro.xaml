@@ -1,0 +1,142 @@
+﻿<Window x:Class="WpfApp_27_02.Telas.TelaCadastro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_27_02.Telas"
+        mc:Ignorable="d"
+        Title="Teste" Height="600" Width="1024"
+        Background="Transparent" AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="1" Background="White" BorderThickness="0" Margin="-8 10 0 0" />
+        <Grid Grid.Column="1">
+            <Border Width="20" HorizontalAlignment="Right" Margin="0 10 0 0">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF889A5C"/>
+                        <GradientStop Color="#FF586735" Offset="0.17"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Button Background="Transparent" Click="Button_Click_sair" Cursor="Hand" BorderThickness="0" Width="20" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Image Source="/Recursos/Imagens/Sair.png" />
+            </Button>
+        </Grid>
+        <Border CornerRadius="0 30 0 0" >
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF889A5C"/>
+                    <GradientStop Color="#FF586735" Offset="0.17"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border Background="#FF889A5C" CornerRadius="0 30 0 0" Margin="6" Opacity="0.6" />
+        </Border>
+        <StackPanel Grid.Column="0" Margin="15 15 15 0">
+            <Button FontSize="34" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="/Recursos/Imagens/Logo.png"/>
+            </Button>
+            <Button Content="Escola" FontSize="32" Foreground="#FF3D4A21" Padding="9" BorderBrush="#FF7E9054" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF75864C"/>
+                        <GradientStop Color="#FF7E9054" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Curso" FontSize="32" Foreground="#FF3D4A21" Padding="9" BorderBrush="#FF7E9054" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF75864C"/>
+                        <GradientStop Color="#FF7E9054" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Turma" FontSize="32" Foreground="#FF3D4A21" Padding="9" BorderBrush="#FF7E9054" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF75864C"/>
+                        <GradientStop Color="#FF7E9054" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Aluno" FontSize="32" Foreground="#FF3D4A21" Padding="9" BorderBrush="#FF7E9054" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF75864C"/>
+                        <GradientStop Color="#FF7E9054" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="30">
+            <TextBlock Text="Cadastro de Usuário" FontSize="30" HorizontalAlignment="Center" Foreground="#FF889A5C" Margin="0,0,0,20"/>
+
+            <Label Content="Nome de Usuário" FontSize="24" Foreground="#FF889A5C"/>
+            <TextBox FontSize="24" Padding="6" Margin="0 2">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Email" FontSize="24" Margin="0 2" Foreground="#FF889A5C"/>
+            <TextBox FontSize="24" Padding="6" Margin="0 2">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Senha" FontSize="24" Foreground="#FF889A5C"/>
+            <TextBox FontSize="24" Padding="6">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Label Content="Confirmar Senha" FontSize="24" Foreground="#FF889A5C"/>
+            <TextBox FontSize="24" Padding="6">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <Grid Margin="0 2" Height="132" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Cadastrar" Grid.Column="0" Background="#FF85975A" BorderBrush="{x:Null}" FontSize="24" Padding="6" Height="62" VerticalAlignment="Center" Margin="0,0,10,0" BorderThickness="5" Foreground="White" Click="Button_Click_2">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Grid.Column="1" Content="Cancelar" Background="#FF85975A" BorderBrush="{x:Null}" FontSize="24" Padding="6" Height="62" VerticalAlignment="Center" Margin="0,0,10,0" BorderThickness="5" Foreground="White" Click="Button_Click_cancelar">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="30"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
